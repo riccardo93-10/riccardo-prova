@@ -1,6 +1,14 @@
 
+
+
 import { creaFormSimulazionePrestito } from "./gui.js";
-import { gestisciSelezioneTipoDipendente, gestisciEventoCambioNettoMensile } from "./logic.js";
+import { 
+  gestisciEventoSelezioneTipoDipendente,
+  gestisciEventoCambioRataConsigliata, 
+  gestisciEventoCambioNettoMensile,
+  gestisciEventoAnniSelezionati,
+  gestisciEventoCambioDataNascita
+} from "./logic.js";
 
 //funzione init() asincrona
 //async function init()
@@ -9,8 +17,11 @@ import { gestisciSelezioneTipoDipendente, gestisciEventoCambioNettoMensile } fro
 function init() {
   try {
     creaFormSimulazionePrestito();
-    gestisciSelezioneTipoDipendente();
+    gestisciEventoSelezioneTipoDipendente();
     gestisciEventoCambioNettoMensile();
+    gestisciEventoCambioRataConsigliata();
+    gestisciEventoAnniSelezionati();
+    gestisciEventoCambioDataNascita();
   } 
   catch (err) {
     console.error("Errore in init:", err);

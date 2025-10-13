@@ -1,0 +1,206 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #060c38;
+  color: white;
+  min-height: 200vh; /* per effetto scroll */
+}
+
+.form-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #060c38;
+  display: grid;
+  grid-template-rows: auto auto; /* Due righe */
+  gap: 40px; /* Spazio tra le righe e colonne */
+}
+
+.form-group {
+  margin-bottom: 25px;
+  margin-top:30px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 22px;
+  line-height: 26px;
+  margin-bottom: 10px !important;
+}
+
+select{
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: none;
+  background-color: white;
+  color: #0064b5;
+  height: 60px;
+}
+
+input[type="text"] {
+  width: 100%; 
+  padding: 10px;
+  font-size: 22px;
+  border-radius: 1px;
+  border: none;
+  background-color: #060c38;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  height: 40px;
+  background: transparent;         /* niente sfondo */                  /* rimuove tutti i bordi */
+  border-bottom: 1px solid white;  /* bordo solo in basso */
+  color: white;                    /* testo bianco */
+  padding: 8px 4px;
+}
+
+
+.years-selector {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.years-selector button {
+  background-color:hsla(0,0%,100%,.2);
+  color: white;
+  border: 1px solid white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.years-selector{
+  margin-right: -150px;
+  
+}
+.years-selector button.active {
+  background-color: white;
+  color: #0064b5;
+  transform: scale(1.2);
+  border: none;
+}
+.row-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonne uguali */
+  gap: 10px;
+}
+
+.row-2col {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* prima colonna 1/3, seconda 2/3 */
+  gap: 10px;
+}
+
+.attivo {
+    background-color: rgb(255, 255, 255);
+    color:blue;
+  
+  }
+
+
+  .scritte {
+    padding:10px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+  
+   >div>p{
+  text-align:left;
+  font-size:large;
+  color:#000;
+
+   }
+   >div>h2{
+  text-align:left;
+  font-size:large;
+  color:#000;
+
+   }
+   #terzo {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+
+   }
+
+   .hidden { display: none !important; }
+
+  }
+
+ #annodinascita {
+  width: 100%;    /* larghezza più grande */
+  height: 40px;            /* altezza maggiore */
+  padding: 8px 12px;       /* spazio interno */
+  font-size: 16px;         /* testo più leggibile */
+  margin-top: 17px;
+  border-radius: 25px;     /* bordi arrotondati */
+  box-sizing: border-box;  /* per calcolare bene le dimensioni */
+}
+
+
+#pianoFinaleDiv {
+  position: fixed;
+  bottom: -300px; /* parte nascosta sotto la finestra */
+  left: 0;
+  width: 100%;
+  background: linear-gradient(60deg, rgba(77,190,208,1) 0%, rgba(0,145,206,1) 10%, rgba(60,87,149,1) 40%, rgba(42,56,114,1) 80%, rgba(130,46,129,1) 100%);
+  color: white;
+  text-align: center;
+  padding: 80px 20px; /* aumenta il padding per contenuto centrato */
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+  transition: bottom 0.5s ease-in-out;
+  z-index: 1000;
+}
+
+#pianoFinaleDiv.show {
+  bottom: 0; /* diventa visibile */
+}
+
+/* Seconda riga: due label ai lati opposti */
+.minMax {
+  margin-top: 8px;
+  display: flex;
+  font-size:12px;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-family: "Roboto",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.minMax label {
+  font-weight: bold;
+}
+
+.cifra{
+  font-weight: 500;
+  font-size: 30px;
+  color: var(--custom-form-text-color-secondary);
+  color: #A770E1;
+}
+
+
+.minMax strong {
+  color: #fff;
+}
+
+.badge{
+  display: none;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: .1875rem .9375rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 8px 8px 8px 2px;
+  transition: all .45s ease;
+  background-color: #A770E1;
+}
