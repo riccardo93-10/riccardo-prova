@@ -1,0 +1,22 @@
+ID assegnati
+1️⃣ Prima select — “Di cosa ti occupi?”
+
+select-occupazione → select principale
+
+opt-pubblico → opzione “Dipendente pubblico”
+
+opt-privato → opzione “Dipendente privato”
+
+opt-pensionato → opzione “Pensionato”
+
+2️⃣ Seconda select — “Qual è il tuo contratto?”
+
+select-contratto → select principale
+
+opt-indeterminato → opzione “Indeterminato”
+
+opt-determinato → opzione “Determinato”
+
+3️⃣ Input — “Inserisci valore”
+
+input-valore → input di testo

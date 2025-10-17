@@ -102,7 +102,16 @@ input[type="text"] {
   
   }
 
+  .sfondo{
+   width: 100%;
+   height: 400px;
+   background-image: url("C:/Users/riki9/Downloads/Riccardo2/Riccardo/images/pexels-olly-840996.jpg");
+   background-repeat: no-repeat;
+   background-size:cover;
+   display: flex;
+   align-items: center;
 
+  }
   .scritte {
     padding:10px;
    display: flex;
@@ -147,7 +156,7 @@ input[type="text"] {
 
 #pianoFinaleDiv {
   position: fixed;
-  bottom: -300px; /* parte nascosta sotto la finestra */
+  bottom: -400px; /* parte nascosta sotto la finestra */
   left: 0;
   width: 100%;
   background: linear-gradient(60deg, rgba(77,190,208,1) 0%, rgba(0,145,206,1) 10%, rgba(60,87,149,1) 40%, rgba(42,56,114,1) 80%, rgba(130,46,129,1) 100%);
@@ -203,4 +212,109 @@ input[type="text"] {
   border-radius: 8px 8px 8px 2px;
   transition: all .45s ease;
   background-color: #A770E1;
+}
+
+
+
+.wrapper {
+  padding: 10px 30px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header .subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.header a {
+  color: #cbd5f0;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  gap: 60px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 4px;
+}
+
+.value {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.rates {
+  text-align: right;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.rates strong {
+  font-size: 18px;
+}
+
+.button {
+  border: 1px solid white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: white;
+  color: #1a365d;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+  .info {
+    flex-direction: column;
+   
+  }
+  .right {
+    flex-direction: column;
+    align-items: flex-start;
+  
+  }
+  .rates {
+    text-align: left;
+  }
 }

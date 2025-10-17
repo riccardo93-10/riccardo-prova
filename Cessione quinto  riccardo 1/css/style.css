@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;       /* ultima rete di sicurezza */
+}
+* { box-sizing: border-box; }
+
+
+
+#contenitore{
+  width: 100%;
+  background-color: #080E3E; /* rgb(8, 14, 62) */
+  padding: 50px;
+ 
+}
+
+
+.select {
+  width: 100%;              /* più larga */
+  height: 50px;            /* più alta */
+  color: blue;
+  background-color: white; /* colore sfondo visibile */
+  padding: 0 15px;         /* padding solo orizzontale */
+  font-size: 18px;         /* testo più grande */
+  border-radius: 25px;     /* bordi arrotondati */
+  border: 1px solid #999;  /* contorno leggero */
+  outline: none;           /* toglie bordo blu di default */
+  cursor: pointer;         /* aspetto cliccabile */
+  box-sizing: border-box;
+}
+
+.label{
+font-size: 21px;
+color: white;
+}
+
+
+.input {
+  width: 100%;
+  border: none;                 /* niente bordo */
+  border-bottom: 2px solid #999;/* solo una linea sotto */
+  background: transparent;      /* sfondo trasparente */
+  color: rgb(255, 255, 255);                  /* colore del testo */
+  font-size: 18px;
+  padding: 5px 0;               /* un po’ di spazio sopra e sotto */
+  outline: none;                /* niente bordo blu al focus */
+  transition: border-color 0.3s;/* effetto quando riceve focus */
+}
+
+/* cambia colore della linea quando scrivi o vai sopra */
+.input:focus {
+  border-bottom-color: rgb(255, 255, 255);
+}
+
+/* stile per il placeholder */
+.input::placeholder {
+  color: #999;
+  opacity: 0.7;
+}
+
+
+/* pulsanti circolari anni */
+.btn-year {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #1e90ff;
+  background: #fff;
+  color: #1e90ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s, color 0.2s, transform 0.05s;
+  font-family: inherit;
+}
+
+.btn-year .num {
+  font-size: 22px;      /* numero grande */
+  line-height: 1;
+  font-weight: 700;
+}
+.btn-year .unit {
+  font-size: 12px;      /* "anni" piccolo */
+  line-height: 1;
+  opacity: 0.9;
+}
+
+/* Inversione colori quando attivo */
+.btn-year.active {
+  background: #1e90ff;
+  color: #fff;
+}
+
+/* piccolo feedback al click/hover */
+.btn-year:hover { transform: translateY(-1px); }
+.btn-year:active { transform: translateY(0); }
+
+/* pulsante calcola rata */
+#btn-calcola-rata.btn-calcola {
+  display: block;              /* 👈 fondamentale */
+  margin: 20px auto;           /* centra orizzontalmente */
+  background-color: #2d89ef;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#btn-calcola-rata.btn-calcola:hover {
+  background-color: #1e6fd9;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+#btn-calcola-rata.btn-calcola:active {
+  background-color: #195fb3;
+  transform: translateY(1px);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}

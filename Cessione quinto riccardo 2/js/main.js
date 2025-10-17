@@ -1,14 +1,12 @@
+import { creaFormSimulazionePrestito,creaDivPianoFinale } from "./view/gui.js";
 
-
-
-import { creaFormSimulazionePrestito } from "./gui.js";
 import { 
   gestisciEventoSelezioneTipoDipendente,
   gestisciEventoCambioRataConsigliata, 
   gestisciEventoCambioNettoMensile,
   gestisciEventoAnniSelezionati,
   gestisciEventoCambioDataNascita
-} from "./logic.js";
+} from "./controller/logic.js";
 
 //funzione init() asincrona
 //async function init()
@@ -17,6 +15,7 @@ import {
 function init() {
   try {
     creaFormSimulazionePrestito();
+    creaDivPianoFinale();
     gestisciEventoSelezioneTipoDipendente();
     gestisciEventoCambioNettoMensile();
     gestisciEventoCambioRataConsigliata();
